@@ -112,7 +112,7 @@
                 onload : function () {
                   loading.css('width',"100%");
                 },
-                onstop : function() {
+                onpause : function() {
                   stop();
                 }
               });
@@ -141,7 +141,7 @@
 
       var play = function() {
         if(sound) {
-          soundManager.stopAll();
+          soundManager.pauseAll();
           sound.paused ? sound.resume() : sound.play();
           $(".delimiter",dom).show();
           dom.addClass("playing");
