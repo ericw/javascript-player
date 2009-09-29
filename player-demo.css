@@ -1,0 +1,57 @@
+/* custom-css */
+div#custom-css {
+  background-color: #8cbfea;
+  color: #0a2f4e;
+}
+
+#custom-css .progress {
+  background-color: #71a0c8;
+}
+
+#custom-css .loading {
+  background-color: #244b6c;
+}
+
+#custom-css .controls, a#custom-css {
+  background-image: url(controls-blue.png);
+}
+
+/* custom-size */
+div#custom-size {
+  background-color: #f88aff;
+  height: 45px;
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #a02062;
+}
+
+#custom-size .progress {
+  background-color: #e55bee;
+  height: 44px;
+}
+
+#custom-size .progress-bar {
+  height: 45px;
+}
+
+#custom-size .loading {
+  background-color: #a02062;
+}
+
+#custom-size a {
+  color: #a02062;
+}
+
+#custom-size .metadata {
+  left: 50px;
+}
+
+#custom-size .controls, a#custom-size {
+  background-image: url(controls-large-pink.png);
+  width: 40px;
+  height: 40px;
+}
+
+#custom-size.playing > a {
+  background-position: -40px 0;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Players</title>
+	<link href="player.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="player-demo.css" media="all" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="soundmanager2.js"></script>
+  <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+  <script type="text/javascript" src="player.js"></script>
+  <script type="text/javascript" src="demo.js"></script>
+  <style type="text/css">
+    body {
+      font-family : Arial, sans-serif;
+      padding: 30px;
+    }
+    pre {
+      background: #eee;
+      border: 1px solid #ccc;
+      padding: 1em 0 0 0;
+      width: 70%;
+      overflow: auto;
+    }    
+  </style>
+</head>
+<body>
+  <h1>SoundCloud Javascript Player Demo</h1>
+  <h6>March 5th, 2009 by <a href="http://eric.wahlforss.com">Eric Wahlforss</a></h6>
+  <p>More examples and documentation over at <a href="http://wiki.github.com/soundcloud/api/javascript-players">Github</a>. To run these demos you'll need to either to serve this page through a web server, or adjust Flash's security settings to allow access to your filesystem.</p>
+  <h2>Basic initialization</h2>
+  <pre>
+    $("a.soundcloud-player#basic").scPlayer();
+  </pre>
+  <a class="soundcloud-player" id="basic" href="http://soundcloud.com/forss/flickermood">Play</a>
+  <h2>Custom width</h2>
+  <pre>
+    $("a.soundcloud-player#custom-width").scPlayer({width: 600});
+  </pre>
+  <a class="soundcloud-player" id="custom-width" href="http://soundcloud.com/forss/journeyman">Play</a>
+  <h2>Blue player with custom CSS</h2>
+  <pre>
+    $("a.soundcloud-player#custom-css").scPlayer();
+  </pre>
+  <pre>
+    div#custom-css {
+      background-color: #8cbfea;
+      color: #0a2f4e;
+    }
+
+    #custom-css .progress {
+      background-color: #71a0c8;
+    }
+
+    #custom-css .loading {
+      background-color: #244b6c;
+    }
+    
+    #custom-css a {
+    }
+
+    #custom-css .controls, a#custom-css {
+      background-image: url(controls-blue.png);
+    }
+  </pre>
+  <a class="soundcloud-player" id="custom-css" href="http://soundcloud.com/forss/soulhack">Play</a>
+
+  <h2>Large pink player with custom CSS, width and height</h2>
+  <pre>
+    $("a.soundcloud-player#custom-size").scPlayer({width: "100%",collapse:false});
+  </pre>
+  <pre>
+    div#custom-size {
+      background-color: #f88aff;
+      height: 45px;
+      font-family: Georgia, serif;
+      font-size: 32px;
+      color: #a02062;
+    }
+
+    #custom-size .progress {
+      background-color: #e55bee;
+      height: 44px;
+    }
+
+    #custom-size .progress-bar {
+      height: 45px;
+    }
+
+    #custom-size .loading {
+      background-color: #a02062;
+    }
+    
+    #custom-size a {
+      color: #a02062;
+    }
+
+    #custom-size .metadata {
+      left: 50px;
+    }
+
+    #custom-size .controls, a#custom-size {
+      background-image: url(controls-large-pink.png);
+      width: 40px;
+      height: 40px;
+    }
+    
+    #custom-size.playing > a {
+      background-position: -40px 0;
+    }    
+  </pre>
+  <a class="soundcloud-player" id="custom-size" href="http://soundcloud.com/forss/city-ports">Play</a>
+  <h2>Autoplay</h2>
+  <pre>
+    $("a.soundcloud-player#custom-size").scPlayer({autoplay: true});
+  </pre>
+  <p>No example given for autoplay</p>
+  
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Styles for the SC player */
+
+.sc-player {
+  background: #eee;
+  width: 24px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  height: 24px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1;
+  overflow: hidden;
+  -moz-user-select : none;
+}
+
+  .sc-player.controls, .soundcloud-player {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(controls.png) no-repeat 0 0;
+    text-indent: -9999px;
+    outline: 0;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 10;
+  }
+  
+  .soundcloud-player {
+    position: relative;
+  }
+  
+  .sc-player.playing > a {
+    background-position: -20px 0;
+  }
+
+  .sc-player .metadata {
+    position: absolute;
+    left: 26px;
+    top: 4px;
+    margin: 0;
+  }
+
+  .sc-player a {
+    color: #555;
+    text-decoration: none;    
+  }
+  
+  .sc-player a:hover {
+    text-decoration: underline;    
+  }
+  
+  .sc-player .permalink {
+    position: absolute;
+    left: 20px;
+    top: 4px;
+    z-index: 20;
+  }
+  
+  .sc-player .time {
+    position: absolute;
+    right: 2px;
+    top: 4px;
+    margin: 0;
+  }
+  
+  .sc-player .loading {
+    height: 1px;
+    position: absolute;
+    background: #aaa;
+    bottom: 0;
+  }
+  
+  .sc-player .delimiter {
+    display: none;
+  }
+  
+  .sc-player .progress {
+    height: 23px;
+    position: absolute;
+    background: #ccc;
+    bottom: 1px;
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#bbb));*/ /* fancy gradient for webkit */
+  }
+  
+  .sc-player .progress-bar {
+    position: absolute;
+    top: 0;
+    height: 24px;
+    width: 100%;
+    z-index: 5;
+  }
