@@ -87,13 +87,13 @@
           progressBar.click(function(ev) {
             var percent = (ev.clientX-progressBar.offset().left)/(progressBar.width());
             if(sound.durationEstimate*percent < sound.duration) {
-              sound.setPosition(sound.durationEstimate*percent);
               play();
+              sound.setPosition(sound.durationEstimate*percent);
             }
           });
           
           var timer = setInterval(function() {  // this is kind of ugly but don't know a better way of waiting for SoundManager 2 when multiple players are on the page
-            if(window.soundManager.swfLoaded) {
+            if(soundManager.swfLoaded) {
               sound = soundManager.createSound({
                 id: track.id,
                 url: track.stream_url,
@@ -111,9 +111,12 @@
                 },
                 onload : function () {
                   loading.css('width',"100%");
+                },
+                onstop : function() {
+                  stop();
                 }
               });
-
+              
               if(autoplay) {
                 play();
               }
@@ -138,6 +141,7 @@
 
       var play = function() {
         if(sound) {
+          soundManager.stopAll();
           sound.paused ? sound.resume() : sound.play();
           $(".delimiter",dom).show();
           dom.addClass("playing");
