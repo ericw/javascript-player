@@ -49,7 +49,7 @@
         dom.attr("id",link.attr("id"));
         link.attr("id","");
         
-        $.getJSON("http://api.soundcloud.com/tracks/" + link.attr("href").substring(link.attr("href").lastIndexOf("/")+1) + ".js?callback=?", function(data) {
+        $.getJSON("http://api.soundcloud.com/resolve?url=" + encodeURIComponent(link.attr("href")) + "&format=js&callback=?", function(data) {
           track = data;
 
           $("<div class='loading'></div><div class='progress'></div><div class='progress-bar'></div><p class='time'></p>").appendTo(dom);
